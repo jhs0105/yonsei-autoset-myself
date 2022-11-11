@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/common/favicon.png" type="image/x-icon" />
+    <title>연세대학교 이과대학</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/swiper-bundle.css" />
+    <link rel="stylesheet" href="../css/splitting.css" />
+    <link rel="stylesheet" href="../css/aos.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/intro.css" />
+    <link rel="stylesheet" href="../css/board.css">
+
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/5f5f753b4c.js" crossorigin="anonymous"></script>
+    <script src="../js/gsap/gsap.min.js"></script>
+    <script src="../js/splitting.min.js"></script>
+    <script src="../js/aos.js"></script>
+    <script src="../js/gsap/ScrollToPlugin.min.js"></script>
+    <script src="../js/common.js" defer></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	9f736608ad5140e2229853f3a32875f5&libraries=services"></script>
+    <!-- 카카오맵 라이브러리 사용할 때 꼭 뒤에 &libraries=services 붙여야 한다 -->
+  </head>
+  <body>
+    <header id="header">
+      <div class="container">
+        <h1 id="logo">
+          <a href="./"><img src="../images/layout/logo_w.svg" alt="" class="logo-white" /><img src="../images/layout/logo.svg" alt="" class="logo-color" /></a>
+        </h1>
+        <nav id="gnb">
+          <ul class="list">
+            <li>
+              <a href="introduce.html" class="depth01">대학소개</a>
+              <? include("../include/gnb01.html") ?>
+            </li>
+            <li>
+              <a href="department.html" class="depth01">전공안내</a>
+              <? include("../include/gnb02.html") ?>
+            </li>
+            <li>
+              <a href="" class="depth01">연구</a>
+              <ul class="depth02">
+                <li><a href="">대학부설연구소</a></li>
+                <li><a href="">BK21+교육연구단</a></li>
+                <li><a href="">주요연구사업단</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="" class="depth01">교육</a>
+              <ul class="depth02">
+                <li><a href="">입학안내</a></li>
+                <li><a href="">학사일정 및 내규</a></li>
+                <li><a href="">장학금 정보</a></li>
+                <li><a href="">학생수상내역</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="notice.html" class="depth01">소식 및 시설</a>
+              <? include("../include/gnb05.html"); ?>
+            </li>
+          </ul>
+        </nav>
+        <div id="util">
+          <div class="language-btn">
+            <button>language</button>
+            <ul class="sub-btn">
+              <li><a href="">korean</a></li>
+              <li><a href="">english</a></li>
+            </ul>
+          </div>
+          <a href=""><i class="fa-solid fa-bars"></i></a>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+  </body>
+</html>

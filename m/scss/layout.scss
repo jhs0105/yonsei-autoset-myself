@@ -1,0 +1,171 @@
+@import "vars";
+@import "mixins";
+// @붙이면 가져올수 있다. (import할때는 제목의 언더바를 붙이지 않는다)
+
+body {
+  font-family: "Roboto", "Noto Sans KR", "돋움";
+  color: #111;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+//이미지는 글자처럼 처리된다.
+img {
+  vertical-align: top;
+  //이걸쓰면 이미지 위로 붙여 준다. 안쓰면 이미가 살짝 벌어짐
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  height: 60px;
+  z-index: 99;
+  width: 100%;
+  &.on,
+  &.on2 {
+    background-color: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    #gnb > .list > li > .depth01 {
+      color: #333;
+    }
+    .container #logo .logo-color {
+      opacity: 1;
+    }
+    .container #logo .logo-white {
+      opacity: 0;
+    }
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    #logo {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: 10px;
+      img {
+        position: absolute;
+        height: 35px;
+      }
+      .logo-color {
+        opacity: 0;
+      }
+    }
+    #gnb {
+      transition: all 0.25s ease;
+      position: absolute;
+      top: 60px;
+      width: 100%;
+      height: 100vh;
+      background-color: white;
+      color: #111;
+      right: -100%;
+      &.on2 {
+        right: 0;
+      }
+      .list {
+        .depth01 {
+          display: flex;
+          justify-content: space-between;
+          padding: 20px 20px;
+          font-weight: 700;
+          border-bottom: 1px solid #ddd;
+          position: relative;
+
+          &:after {
+            content: "\f078";
+            font-family: "FontAwesome";
+            transition: all 0.25s ease;
+          }
+          &.on {
+            &:after {
+              transform: rotate(180deg);
+            }
+          }
+        }
+        .depth02 {
+          display: none;
+          font-size: 16px;
+          width: 100%;
+          padding: 10px 0;
+          background-color: $main-color;
+          color: white;
+          li {
+            width: 100%;
+            a {
+              display: block;
+              padding: 10px 30px;
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+    #util {
+      transition: all 0.25s ease;
+      position: absolute;
+      right: 10px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      .btn-all {
+        li {
+          width: 20px;
+          height: 60px;
+          position: relative;
+          span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            position: absolute;
+            background-color: #111;
+            transition: all 0.25s ease;
+            &:nth-child(1) {
+              top: 22px;
+            }
+            &:nth-child(2) {
+              top: 30px;
+            }
+            &:nth-child(3) {
+              top: 38px;
+            }
+          }
+        }
+        &.on {
+          li span {
+            &:nth-child(1) {
+              top: 30px;
+              transform: rotate(45deg);
+            }
+            &:nth-child(2) {
+              top: 30px;
+              transform: scaleX(0);
+            }
+            &:nth-child(3) {
+              top: 30px;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

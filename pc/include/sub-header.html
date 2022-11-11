@@ -1,0 +1,30 @@
+<? include("../include/header.html") ?>
+<div class="part">
+  <div class="container">
+    <div class="intro">
+      <h2><?= $mainTitle ?></h2>
+      <img src="../images/main/sub-visual0<?= $subIdx ?>.jpg" alt="" />
+    </div>
+  </div>
+</div>
+<div class="sub-contents-box">
+  <div class="container">
+    <ul id="sub-menu">
+      <li>
+        <a href=""><img src="../images/main/icon_home.png" alt="" /></a>
+      </li>
+      <li>
+        <a href="" class="plus"><?= $mainTitle ?></a>
+        <? include("../include/gnb.html") ?>
+      </li>
+      <li>
+        <a href="" class="plus"><?= $subTitle ?></a>
+        <? include("../include/gnb0".$subIdx.".html") ?>
+      </li>
+    </ul>
+    <a href=""><i class="fa-solid fa-print"></i></a>
+  </div>
+</div>
+<div class="title">
+  <h3><?= $subTitle ?></h3>
+</div>

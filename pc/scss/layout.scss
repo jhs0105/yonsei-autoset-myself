@@ -1,0 +1,214 @@
+@import "vars";
+@import "mixins";
+// @붙이면 가져올수 있다. (import할때는 제목의 언더바를 붙이지 않는다)
+
+body {
+  font-family: "Roboto", "Noto Sans KR", "돋움";
+  color: #111;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+//이미지는 글자처럼 처리된다.
+img {
+  vertical-align: top;
+  //이걸쓰면 이미지 위로 붙여 준다. 안쓰면 이미가 살짝 벌어짐
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+.container {
+  width: 1460px;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  height: 120px;
+  z-index: 99;
+  width: 100%;
+  &.on {
+    background-color: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    #gnb > .list > li > .depth01 {
+      color: #333;
+    }
+    .container #logo .logo-color {
+      opacity: 1;
+    }
+    .container #logo .logo-white {
+      opacity: 0;
+    }
+  }
+  .container {
+    width: 1800px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    #logo {
+      height: 120px;
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: 0%;
+      a {
+        height: 120px;
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        position: absolute;
+        height: 50px;
+      }
+      .logo-color {
+        opacity: 0;
+      }
+    }
+    #gnb {
+      .list {
+        display: flex;
+        color: white;
+        li {
+          position: relative;
+          &:hover {
+            .depth02 {
+              opacity: 1;
+              pointer-events: auto;
+            }
+            .depth01 {
+              background-color: $main-color;
+              color: white;
+              &:after {
+                opacity: 1;
+              }
+            }
+          }
+        }
+        .depth01 {
+          height: 120px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 180px;
+          font-weight: 700;
+          transition: all 0.3s ease;
+          position: relative;
+          &:after {
+            content: "";
+            height: 2px;
+            display: block;
+            position: absolute;
+            right: 20px;
+            left: 20px;
+            background-color: lighten($main-color, 20);
+            bottom: 10px;
+            opacity: 0;
+            transform: all 0.3s ease;
+          }
+        }
+        .depth02 {
+          font-size: 16px;
+          background-color: $main-color;
+          text-align: center;
+          padding: 20px 0;
+          border-radius: 0 0 25px 25px;
+          opacity: 0;
+          pointer-events: none;
+          position: absolute;
+          width: 180px;
+          transition: all 0.3s ease;
+
+          li {
+            padding: 10px 0;
+            opacity: 0.7;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    #util {
+      position: absolute;
+      right: 0;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      .language-btn {
+        position: relative;
+        &:hover {
+          button {
+            background-color: $main-color;
+            color: white;
+          }
+          .sub-btn {
+            opacity: 1;
+            pointer-events: auto;
+            top: 40px;
+          }
+        }
+        button {
+          font-size: 16px;
+          text-transform: uppercase;
+          background-color: #ccc;
+          width: 150px;
+          padding: 10px;
+          border-radius: 10px;
+          transition: all 0.25s ease;
+          position: relative;
+        }
+        .sub-btn {
+          position: absolute;
+          pointer-events: none;
+          background-color: $main-color;
+          border-radius: 10px;
+          text-transform: uppercase;
+          padding: 10px 0;
+          width: 150px;
+          text-align: center;
+          top: 80px;
+          opacity: 0;
+          transition: all 0.25s ease;
+          li {
+            font-size: 16px;
+            padding: 10px 0;
+            position: relative;
+            &:hover {
+              color: white;
+              &:after {
+                opacity: 1;
+              }
+            }
+            &:after {
+              content: "";
+              height: 1px;
+              display: block;
+              bottom: 0;
+              left: 20px;
+              right: 20px;
+              position: absolute;
+              background-color: #fff;
+              opacity: 0;
+            }
+          }
+        }
+      }
+      a {
+        i {
+          margin-left: 50px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@import "vars";
+@import "mixins";
+
+.container {
+  .search-box {
+    padding: 100px 0 50px;
+    form {
+      display: flex;
+      justify-content: center;
+      select {
+        width: 150px;
+        padding: 0 10px;
+        border: 1px solid #ccc;
+      }
+      input {
+        height: 50px;
+        width: 300px;
+        margin: 0 10px;
+        padding: 0 10px;
+        border: 1px solid #ccc;
+      }
+      button {
+        background-color: #111;
+        color: #fff;
+        width: 100px;
+      }
+    }
+  }
+  .bbs {
+    margin-bottom: 50px;
+    width: 100%;
+    display: table;
+    .bbs-header,
+    .bbs-body {
+      span {
+        border-bottom: 1px solid #ccc;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        height: 60px;
+        &.no {
+          width: 150px;
+        }
+        &.writer {
+          width: 200px;
+        }
+        &.date {
+          width: 300px;
+        }
+      }
+    }
+
+    .bbs-header {
+      display: table-header-group;
+      span {
+        border-bottom: 1px solid #111;
+        border-top: 2px solid #111;
+      }
+    }
+    .bbs-body {
+      display: table-row-group;
+      font-size: 16px;
+      color: #555;
+      li {
+        display: table-row;
+        .subject {
+          text-align: left;
+        }
+      }
+    }
+  }
+  .bbs-pagination {
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: center;
+    color: #555;
+    a {
+      @include flex;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #ccc;
+      margin: 0 5px;
+      &.first {
+        font-size: 15px;
+      }
+      &.last {
+        font-size: 15px;
+      }
+    }
+    ul {
+      display: flex;
+      li {
+        .on {
+          background-color: $main-color;
+          border-color: $main-color;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

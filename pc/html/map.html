@@ -1,0 +1,114 @@
+<?
+
+$mainTitle="대학소개";
+$subTitle="오시는 길";
+$subIdx=1;
+
+?>
+
+<? include("../include/sub-header.html") ?>
+
+<div class="location">
+  <div class="container">
+    <div class="map"></div>
+    <div class="map-box">
+      <div class="map-add">
+        <img src="../images/layout/logo_w.svg" alt="" />
+        <div class="address">
+          <dl>
+            <dt>주소</dt>
+            <dd>서울특별시 서대문구 연세로 50 연세대학교 이과대학 (03722)</dd>
+          </dl>
+          <dl>
+            <dt>TEL</dt>
+            <dd>02-2123-2552~2556</dd>
+          </dl>
+          <dl>
+            <dt>FAX</dt>
+            <dd>02-2123-8640</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="map-info">
+        <ul>
+          <li>
+            <a href=""
+              >캠퍼스맵 <br />
+              가이드 보기</a
+            >
+          </li>
+          <li>
+            <a href=""
+              >연세대학교 <br />
+              VR맵 보기</a
+            >
+          </li>
+          <li>
+            <a href=""
+              >캠퍼스맵 <br />
+              다운로드(PDF)</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="transport">
+      <h3><i class="fa-solid fa-train-subway"></i>지하철</h3>
+      <ul class="station">
+        <li class="subway">
+          <span class="line2">2</span> 신촌역
+          <ul>
+            <li>2번 출구(연세대학교, 세브란스병원 방향)</li>
+            <li>3번 출구(연세대학교, 한국사이버대학교 방향)</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="transport">
+      <h3><i class="fa-solid fa-bus-simple"></i>버스</h3>
+      <ul class="station">
+        <li>
+          연세대학교 / 연세대학교 앞 (중앙차선)
+          <ul>
+            <li><span class="blue">간선</span> 153, 163, 171, 272, 470, 601, 606, 672, 673, 700, 707, 710, 750A, 750B, 751</li>
+            <li><span class="green">지선</span> 6714, 7737</li>
+            <li><span class="red">광역</span> 9714, M6724, M7106, M7111, M7119</li>
+            <li><span>공항</span> 6011</li>
+            <li><span>일반</span> 567, 73</li>
+            <li><span>좌석</span> 770, 800</li>
+            <li><span>직행</span> 1000, 1100, 1200, 1900, 2000, 2000-1</li>
+          </ul>
+        </li>
+        <li>
+          연세대학교 정문
+          <ul>
+            <li><span class="blue">간선</span> 163, 171, 172</li>
+            <li><span class="green">지선</span> 7017, 7713, 7720, 7727, 7728, 7737</li>
+            <li><span class="red">광역</span> M6724</li>
+            <li><span>일반</span> 567, 72</li>
+            <li><span>마을</span> 서대문03, 서대문04</li>
+          </ul>
+        </li>
+        <li>
+          세브란스병원 앞 (중앙차선)
+          <ul>
+            <li><span class="blue">간선</span> 272, 470, 601, 606, 672, 673, 700, 707, 710, 750A, 750B, 751</li>
+            <li><span class="green">지선</span> 6714, 7737</li>
+            <li><span>일반</span> 567,73</li>
+            <li><span>좌석</span> 770</li>
+          </ul>
+        </li>
+        <li>
+          세브란스병원
+          <ul>
+            <li><span class="blue">간선</span> 163, 171, 172, 472</li>
+            <li><span class="green">지선</span> 7017, 7024, 7713</li>
+            <li><span>마을</span> 서대문03, 서대문04, 서대문05</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script src="../js/map.js"></script>
+<? include("../include/footer.html") ?>

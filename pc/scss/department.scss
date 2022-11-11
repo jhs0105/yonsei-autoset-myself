@@ -1,0 +1,110 @@
+@import "vars";
+@import "mixins";
+
+.department {
+  position: relative;
+  &:before {
+    content: "";
+    height: 100%;
+    width: 1px;
+    background-color: #ccc;
+    position: absolute;
+    left: 100px;
+  }
+  nav {
+    position: absolute;
+    left: 120px;
+    top: 100px;
+    .department-depth01 {
+      font-size: 20px;
+      font-weight: 500;
+      color: $main-color;
+      margin-bottom: 20px;
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        left: -20px;
+        background-color: $main-color;
+      }
+    }
+    ul {
+      li {
+        font-size: 16px;
+        color: #777;
+        a {
+          padding-bottom: 15px;
+          display: flex;
+          align-items: center;
+          &:before {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 1px;
+            background-color: #777;
+            margin-right: 10px;
+          }
+          &:hover {
+            color: $main-color;
+            &:before {
+              background-color: $main-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .container {
+    .department-box {
+      padding: 100px 0;
+      display: flex;
+    }
+    .department-title {
+      margin-left: 100px;
+      padding-right: 50px;
+      h4 {
+        font-size: 24px;
+        line-height: 1.25;
+        font-weight: 500;
+        margin-bottom: 50px;
+      }
+
+      img {
+        border: 1px solid #ccc;
+      }
+    }
+    .department-contents {
+      display: flex;
+      img {
+        height: 340px;
+        width: 420px;
+        object-fit: cover;
+      }
+      .txt {
+        margin-left: 50px;
+        line-height: 1.5;
+        color: #555;
+        font-size: 16px;
+        .txt-btn {
+          width: 150px;
+          border-bottom: 2px solid #111;
+          padding: 20px 10px;
+          margin-top: 40px;
+          font-weight: 500;
+          color: #111;
+          a {
+            display: flex;
+            justify-content: space-between;
+            &:after {
+              content: "";
+              display: inline-block;
+              @include icon("\f08e");
+            }
+          }
+        }
+      }
+    }
+  }
+}
